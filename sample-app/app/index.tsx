@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import "../global.css"
+import { Link } from "expo-router";
 
 const asciiLines = [
   "⣿⣧⡈⠙⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⢹⠿⣿⣿⣿⣿",
@@ -31,6 +32,9 @@ const Index = () => {
 
   return (
     <View style={styles.container}>
+      <Link href={"/home"} className="bg-black border text-white">Home</Link>
+      <Link href={"/test/sample"} className="bg-black border text-white">Sample</Link>
+
       <Text style={styles.ascii}>
         {asciiLines.slice(0, visibleLines).join("\n")}
       </Text>
